@@ -6,8 +6,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.example.shelter.dao.AnimalDao;
 import com.example.shelter.dto.AnimalDto;
@@ -16,18 +14,20 @@ import com.example.shelter.model.Animal;
 
 @Service
 public class AnimalService {
-	
+
+//	private final Logger logger = LoggerFactory.getLogger(getClass());
+
 	@Autowired
 	private AnimalDao animalDao;
-	
-	public List<Animal> getAllAnimal(){
+
+	public List<Animal> getAllAnimal() {
 		return animalDao.getAllAnimals();
 	}
-	
+
 	public Animal getAnimalById(long id) throws AnimalNotFoundException {
 		return animalDao.getAnimal(id);
 	}
-	
+
 	public Animal addAnimal(AnimalDto animalDto) {
 		Animal animal = new Animal();
 		animal.setAge(animalDto.getAge());
@@ -40,11 +40,20 @@ public class AnimalService {
 		return animalDao.saveAnimal(animal);
 	}
 
-	
-	
-//	@GetMapping("/animals/{id}")
-//	public Animal getAnimalWithID(@PathParam("id") long id){
-//		return animalDao.getAnimal(id);
-//	}
+	public Animal deleteAnimal(long id) throws AnimalNotFoundException {
+		return animalDao.deleteAnimalById(id);
+	}
+
+	public List<Animal> queryAnimals(String kind, String gender, String breed) throws AnimalNotFoundException {
+		kind = kind.trim();
+		gender = gender.trim();
+		breed = breed.trim();
+		if ((kind + gender + breed).equals("")) {
+			return animalDao.getAllAnimals();
+		}
+		return animalDao.searchBy(breed, kind, gender);
+		// TODO Auto-generated method stub
+
+	}
 
 }
