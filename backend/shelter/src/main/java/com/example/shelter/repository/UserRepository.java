@@ -1,9 +1,9 @@
-package com.eteration.bootcamp.repository;
+package com.example.shelter.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.eteration.bootcamp.model.User;
+import com.example.shelter.model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
