@@ -1,4 +1,4 @@
-package com.eteration.bootcamp.model;
+package com.example.shelter.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
