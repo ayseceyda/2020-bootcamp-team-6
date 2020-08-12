@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     Card,
     CardGroup,
-    Button
+    Button,
+    Container
 } from 'react-bootstrap';
 
 
@@ -21,10 +22,10 @@ export default class CardComponent extends Component {
                 </Card.Text>
                         
                     </Card.Body>
-                    <div>
-                    <Button variant="primary">See</Button><br /><br />
+                    <Container>
+                <Button variant="primary">See</Button><br /><br />
                         <Button variant="primary">Adopt</Button><br /><br />
-                        </div>
+                        </Container>
                     <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
@@ -39,10 +40,10 @@ export default class CardComponent extends Component {
                         </Card.Text>
                         
                     </Card.Body>
-                    <div>
-                    <Button variant="primary">See</Button><br /><br />
+                    <Container>
+                <Button variant="primary">See</Button><br /><br />
                         <Button variant="primary">Adopt</Button><br /><br />
-                        </div>
+                        </Container>
                     <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
@@ -56,12 +57,14 @@ export default class CardComponent extends Component {
                             additional content. This card has even longer content than the first to
                             show that equal height action.
                 </Card.Text>
-                        
-                    </Card.Body>
-                    <div>
-                    <Button variant="primary">See</Button><br /><br />
+                <Container>
+                <Button variant="primary">See</Button><br /><br />
                         <Button variant="primary">Adopt</Button><br /><br />
-                        </div>
+                        </Container>
+                    </Card.Body>
+                    
+                 
+                       
                     <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>

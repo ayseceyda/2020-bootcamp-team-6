@@ -40,9 +40,10 @@ import {
   Col,
   Carousel
  } from 'react-bootstrap';
+ 
 
  // Components imports....
- import NavbarComponent from './components/navbar/navbar.js';
+ import NavbarComponent from '../../components/navbar/navbar.js';
  import CarouselComponent from './components/carousel/carousel.js';
  import JumbotronComponent from './components/jumbotron/jumbotron.js';
  import CardComponent from './components/cards/cards.js';
@@ -73,7 +74,7 @@ export function HomePage({
 
   return (
  <React.Fragment>
-    
+   
     <Container>
       <Row>
     <NavbarComponent/>  
