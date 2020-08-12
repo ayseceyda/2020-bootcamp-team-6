@@ -33,6 +33,20 @@ import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
+import { 
+  Button,
+  Container,
+  Row,
+  Col,
+  Carousel
+ } from 'react-bootstrap';
+
+ // Components imports....
+ import NavbarComponent from './components/navbar/navbar.js';
+ import CarouselComponent from './components/carousel/carousel.js';
+ import JumbotronComponent from './components/jumbotron/jumbotron.js';
+ import CardComponent from './components/cards/cards.js';
+ import DataTableComponent from './components/data-table/data-table.js';
 const key = 'home';
 
 export function HomePage({
@@ -58,46 +72,26 @@ export function HomePage({
   };
 
   return (
-    <article>
-      <Helmet>
-        <title>Home Page</title>
-        <meta
-          name="description"
-          content="A React.js Boilerplate application homepage"
-        />
-      </Helmet>
-      <div>
-        <CenteredSection>
-          <H2>
-            <FormattedMessage {...messages.startProjectHeader} />
-          </H2>
-          <p>
-            <FormattedMessage {...messages.startProjectMessage} />
-          </p>
-        </CenteredSection>
-        <Section>
-          <H2>
-            <FormattedMessage {...messages.trymeHeader} />
-          </H2>
-          <Form onSubmit={onSubmitForm}>
-            <label htmlFor="username">
-              <FormattedMessage {...messages.trymeMessage} />
-              <AtPrefix>
-                <FormattedMessage {...messages.trymeAtPrefix} />
-              </AtPrefix>
-              <Input
-                id="username"
-                type="text"
-                placeholder="mxstbr"
-                value={username}
-                onChange={onChangeUsername}
-              />
-            </label>
-          </Form>
-          <ReposList {...reposListProps} />
-        </Section>
-      </div>
-    </article>
+ <React.Fragment>
+    
+    <Container>
+      <Row>
+    <NavbarComponent/>  
+    </Row>
+    
+       <Col>
+    <CarouselComponent/>
+    <JumbotronComponent/>
+    <CardComponent/>
+   
+   </Col>
+   
+  
+      </Container>
+    
+  
+  </React.Fragment>
+   
   );
 }
 
