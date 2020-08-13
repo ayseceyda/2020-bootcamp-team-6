@@ -74,23 +74,14 @@ export function HomePage({
 
   return (
  <React.Fragment>
-   
-    <Container>
-      <Row>
     <NavbarComponent/>  
-    </Row>
     
-       <Col>
     <CarouselComponent/>
     <JumbotronComponent/>
     <CardComponent/>
-   
-   </Col>
-   
-  
-      </Container>
-    
-  
+    <Container>
+    <DataTableComponent/>
+    </Container>
   </React.Fragment>
    
   );

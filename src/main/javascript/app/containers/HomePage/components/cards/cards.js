@@ -35,9 +35,9 @@ export default class CardComponent extends Component {
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
-                            This card has supporting text below as a natural lead-in to additional
-                  content.{' '}
-                        </Card.Text>
+                            This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                </Card.Text>
                         
                     </Card.Body>
                     <Container>
@@ -49,21 +49,20 @@ export default class CardComponent extends Component {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="https://i.hizliresim.com/2NLXuO.jpg" />
+                    <Card.Img variant="top" src="https://wallpapercave.com/wp/Qe4Xprm.jpg" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
                             This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to
-                            show that equal height action.
+                            additional content. This content is a little bit longer.
                 </Card.Text>
-                <Container>
+                        
+                    </Card.Body>
+                    
+                    <Container>
                 <Button variant="primary">See</Button><br /><br />
                         <Button variant="primary">Adopt</Button><br /><br />
                         </Container>
-                    </Card.Body>
-                    
-                 
                        
                     <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>

@@ -13,8 +13,9 @@ export default class CarouselComponent extends Component {
 
           />
           <Carousel.Caption>
-
-          </Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item >
           <img
@@ -24,7 +25,8 @@ export default class CarouselComponent extends Component {
 
           />
           <Carousel.Caption>
-
+          <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
           </Carousel.Caption>
         </Carousel.Item>
@@ -36,7 +38,8 @@ export default class CarouselComponent extends Component {
 
           />
           <Carousel.Caption>
-
+          <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
           </Carousel.Caption>
         </Carousel.Item>
