@@ -56,15 +56,20 @@ export default class LoginPage extends Component {
             padding: "40px",
             width: "400px",
             margin: "50px 350px 300px",
-            backgroundColor: "#e4dbd9",
+            backgroundColor: "#f9ebee",
+            opacity: "0.9",
           };
 
           const buttonstylelogin = {
             margin: "0px -250px 0px -30px",
           }
 
+          const bodystyle ={
+            backgroundImage: "url('https://i.hizliresim.com/X5WbVZ.jpg')",
+          }
+
         return (
-            <React.Fragment >
+                <div style = {bodystyle}>
                 <NavbarComponent />
                 <Container >
 
@@ -94,7 +99,7 @@ export default class LoginPage extends Component {
 
                             </div>
                 </Container>
-            </React.Fragment>
+                </div>
         );
     }
 }
