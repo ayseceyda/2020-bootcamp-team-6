@@ -11,7 +11,8 @@ import { Switch, Route } from 'react-router-dom';
  import LoginPage from '../LoginPage/index.js';
  import ContactPage from '../ContactPage/index.js';
  import AccountSettingsPage from '../AccountSettingsPage/index.js';
- import GlobalStyle from '../../global-styles';
+ import AppointmentPage from '../AppointmentPage/index.js';
+
 
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);
@@ -31,6 +32,7 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/login" component={LoginPage}/>
         <Route exact path="/contact" component={ContactPage}/>
+        <Route exact path="/appointment" component={AppointmentPage}/>
         <Route exact path="/account-settings" component={AccountSettingsPage}/>
       </Switch>
     

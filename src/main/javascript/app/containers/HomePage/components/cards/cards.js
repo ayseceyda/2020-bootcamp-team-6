@@ -23,8 +23,8 @@ export default class CardComponent extends Component {
                         
                     </Card.Body>
                     <Container>
-                <Button variant="primary">See</Button><br /><br />
-                        <Button variant="primary">Adopt</Button><br /><br />
+                <Button  variant="primary">See</Button><br /><br />
+                        <Button href="/appointment" variant="primary">Adopt</Button><br /><br />
                         </Container>
                     <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
@@ -42,7 +42,7 @@ export default class CardComponent extends Component {
                     </Card.Body>
                     <Container>
                 <Button variant="primary">See</Button><br /><br />
-                        <Button variant="primary">Adopt</Button><br /><br />
+                <Button href="/appointment" variant="primary">Adopt</Button><br /><br />
                         </Container>
                     <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
@@ -61,7 +61,7 @@ export default class CardComponent extends Component {
                     
                     <Container>
                 <Button variant="primary">See</Button><br /><br />
-                        <Button variant="primary">Adopt</Button><br /><br />
+                <Button href="/appointment" variant="primary">Adopt</Button><br /><br />
                         </Container>
                        
                     <Card.Footer>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {
-    Container
+    Container, Form, Button, Col
 } from 'react-bootstrap';
 import NavbarComponent from '../../components/navbar/navbar.js';
 import axios from 'axios';
-
+import './components/styles/style.css';
 
 export default class LoginPage extends Component {
     constructor(props){
@@ -52,49 +52,39 @@ export default class LoginPage extends Component {
 
 
     render() {
+       
         const loginstyle = {
-            padding: "40px",
-            width: "400px",
-            margin: "50px 350px 300px",
+            padding: "8%",
+            width: "40%",
+            margin: "4% 30% 0%",
             backgroundColor: "#e4dbd9",
+            opacity: 0.8
           };
-
           const buttonstylelogin = {
-            margin: "0px -250px 0px -30px",
+            margin: "0% -50% 0% 77%",
           }
 
         return (
-            <React.Fragment >
-                <NavbarComponent />
-                <Container >
-
-               <div style={loginstyle}>
-                        <form onSubmit = {this.handleSubmit}>
-                            <h1 className="text-center header" > Login </h1>
-                            <div className="form-group" >
-                                <label > Username </label>
-                                <input className="form-control" placeholder= "Username" type="text" 
-                                value = {this.state.username}
-                                onChange = {this.handleChange}
-                                required />
-                            </div>
-                            <div className="form-group">
-                                <label > Password </label> <input type="password" className="form-control" 
-                                name="password"
-                                placeholder = "Password"
-                                value = {this.state.password}
-                                onChange = {this.handleChange}
-                                required/>
-                            </div>
-                            <div className="text-center" >
-                                <button className="btn btn-success" style = {buttonstylelogin}>  Login </button>
-                                <br /><br />
-                                <button className="btn btn-success" style = {buttonstylelogin}> Sign Up </button>
-                            </div> </form> 
-
-                            </div>
-                </Container>
-            </React.Fragment>
+        <React.Fragment>
+            <NavbarComponent />
+          <Container style={loginstyle}>
+  
+                    <Form  >
+                <Form.Group >
+			  <Form.Label>USER NAME</Form.Label>
+			  <Form.Control type="text" placeholder="" />
+			</Form.Group>
+		   <Form.Group >
+           <Form.Control type="password" placeholder="" />	  
+			</Form.Group>
+			<Button className="save-button" style={buttonstylelogin} type="submit" variant="outline-secondary" >Sign In</Button>
+		  </Form>
+          </Container>
+          </React.Fragment>
+        
+           
+           
         );
     }
 }
+
