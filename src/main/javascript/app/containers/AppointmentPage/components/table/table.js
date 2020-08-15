@@ -1,25 +1,26 @@
-import React,{ Component } from 'react';
+import React, { useState } from 'react';
 import {
-    Table
+    Form
 } from 'react-bootstrap';
 
-export default class TableComponent extends Component {
+import DatePickerComponent from '../date-picker/date-picker.js';
+
+export default class TableComponent extends React.Component {
+ 
     render() {
+   
          return(
-            <Table responsive="sm">
-            <thead>
-              <tr>
-                <th>COLUMN</th>
+             <Form>
+                 <Form.Group>
+                 <DatePickerComponent/>
+                 </Form.Group>
+             </Form>
+          
         
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ROW</td>
-        
-              </tr>
-            </tbody>
-          </Table>
          );
     }
 }
+
+/*
+
+*/

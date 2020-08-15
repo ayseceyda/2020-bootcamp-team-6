@@ -54,19 +54,11 @@ export default class LoginPage extends Component {
     render() {
        
         const loginstyle = {
-<<<<<<< HEAD
             padding: "8%",
             width: "40%",
             margin: "4% 30% 0%",
             backgroundColor: "#e4dbd9",
             opacity: 0.8
-=======
-            padding: "40px",
-            width: "400px",
-            margin: "50px 350px 300px",
-            backgroundColor: "#f9ebee",
-            opacity: "0.9",
->>>>>>> b5fb9e6cdb30ef795be5ac1b376fad3e2d66b327
           };
           const buttonstylelogin = {
             margin: "0% -50% 0% 77%",
@@ -77,7 +69,6 @@ export default class LoginPage extends Component {
           }
 
         return (
-<<<<<<< HEAD
         <React.Fragment>
             <NavbarComponent />
           <Container style={loginstyle}>
@@ -97,39 +88,6 @@ export default class LoginPage extends Component {
         
            
            
-=======
-                <div style = {bodystyle}>
-                <NavbarComponent />
-                <Container >
-
-               <div style={loginstyle}>
-                        <form onSubmit = {this.handleSubmit}>
-                            <h1 className="text-center header" > Login </h1>
-                            <div className="form-group" >
-                                <label > Username </label>
-                                <input className="form-control" placeholder= "Username" type="text" 
-                                value = {this.state.username}
-                                onChange = {this.handleChange}
-                                required />
-                            </div>
-                            <div className="form-group">
-                                <label > Password </label> <input type="password" className="form-control" 
-                                name="password"
-                                placeholder = "Password"
-                                value = {this.state.password}
-                                onChange = {this.handleChange}
-                                required/>
-                            </div>
-                            <div className="text-center" >
-                                <button className="btn btn-success" style = {buttonstylelogin}>  Login </button>
-                                <br /><br />
-                                <button className="btn btn-success" style = {buttonstylelogin}> Sign Up </button>
-                            </div> </form> 
-
-                            </div>
-                </Container>
-                </div>
->>>>>>> b5fb9e6cdb30ef795be5ac1b376fad3e2d66b327
         );
     }
 }
