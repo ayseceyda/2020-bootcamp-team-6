@@ -48,6 +48,8 @@ import {
  import JumbotronComponent from './components/jumbotron/jumbotron.js';
  import CardComponent from './components/cards/cards.js';
  import DataTableComponent from './components/data-table/data-table.js';
+
+import ListAnimalComponent from './/components/ListAnimalComponent.jsx';
 const key = 'home';
 
 export function HomePage({
@@ -80,9 +82,12 @@ export function HomePage({
     <JumbotronComponent/>
     <CardComponent/>
     <Container>
+    <ListAnimalComponent />
     <DataTableComponent/>
     </Container>
+
   </React.Fragment>
+
    
   );
 }

@@ -54,20 +54,17 @@ export default class LoginPage extends Component {
     render() {
        
         const loginstyle = {
-<<<<<<< HEAD
             padding: "8%",
             width: "40%",
             margin: "4% 30% 0%",
             backgroundColor: "#e4dbd9",
-            opacity: 0.8
-=======
+            opacity: 0.8,
             padding: "40px",
             width: "400px",
             margin: "50px 350px 300px",
             backgroundColor: "#f9ebee",
             opacity: "0.9",
->>>>>>> b5fb9e6cdb30ef795be5ac1b376fad3e2d66b327
-          };
+          }
           const buttonstylelogin = {
             margin: "0% -50% 0% 77%",
           }
@@ -77,27 +74,7 @@ export default class LoginPage extends Component {
           }
 
         return (
-<<<<<<< HEAD
-        <React.Fragment>
-            <NavbarComponent />
-          <Container style={loginstyle}>
-  
-                    <Form  >
-                <Form.Group >
-			  <Form.Label>USER NAME</Form.Label>
-			  <Form.Control type="text" placeholder="" />
-			</Form.Group>
-		   <Form.Group >
-           <Form.Control type="password" placeholder="" />	  
-			</Form.Group>
-			<Button className="save-button" style={buttonstylelogin} type="submit" variant="outline-secondary" >Sign In</Button>
-		  </Form>
-          </Container>
-          </React.Fragment>
         
-           
-           
-=======
                 <div style = {bodystyle}>
                 <NavbarComponent />
                 <Container >
@@ -129,7 +106,6 @@ export default class LoginPage extends Component {
                             </div>
                 </Container>
                 </div>
->>>>>>> b5fb9e6cdb30ef795be5ac1b376fad3e2d66b327
         );
     }
 }

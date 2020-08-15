@@ -1,6 +1,10 @@
 package com.example.shelter.exception;
 
-public class AnimalNotFoundException extends Exception {
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class AnimalNotFoundException extends RuntimeException {
 
 	/**
 	 * 

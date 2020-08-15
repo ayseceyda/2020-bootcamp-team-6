@@ -15,6 +15,7 @@ export default class ContactPage extends Component {
             <NavbarComponent />
            <Container>
             <MapContainer/>
+
             <FormComponent/>
            </Container>
           
