@@ -15,6 +15,8 @@ public class AnimalDto {
 	private int weight;
 	
 	private String gender;
+	
+	private String animalImage;
 
 	public String getName() {
 		return name;
@@ -70,6 +72,14 @@ public class AnimalDto {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getAnimalImage() {
+		return animalImage;
+	}
+
+	public void setAnimalImage(String animalImage) {
+		this.animalImage = animalImage;
 	}
 	
 	

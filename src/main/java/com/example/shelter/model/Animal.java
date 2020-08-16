@@ -25,6 +25,8 @@ public class Animal {
 	
 	private String gender;
 	
+	private String animalImage;
+	
 	public String getGender() {
 		return gender;
 	}
@@ -72,6 +74,12 @@ public class Animal {
 	}
 	public void setWeight(int weight) {
 		this.weight = weight;
+	}
+	public String getAnimalImage() {
+		return animalImage;
+	}
+	public void setAnimalImage(String animalImage) {
+		this.animalImage = animalImage;
 	}
 	
 	

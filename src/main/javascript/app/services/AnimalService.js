@@ -7,6 +7,7 @@ class AnimalService{
     getAnimals(){
         return axios.get(ANIMAL_API_BASE_URL);
     }
+
 }
 
 export default new AnimalService()

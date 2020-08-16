@@ -55,22 +55,21 @@ export default class LoginPage extends Component {
        
         const loginstyle = {
             padding: "8%",
-            width: "40%",
-            margin: "4% 30% 0%",
+            width: "59%",
+            height: "80%",
             backgroundColor: "#e4dbd9",
-            opacity: 0.8,
-            padding: "40px",
-            width: "400px",
-            margin: "50px 350px 300px",
+            margin: "0% 0% 0% 59.5%",
             backgroundColor: "#f9ebee",
-            opacity: "0.9",
+            opacity: "0.8",
           }
           const buttonstylelogin = {
-            margin: "0% -50% 0% 77%",
+            margin: "-0,5% 0% 0% 70%",
+            align: "center",
+            width: "60%",
           }
 
           const bodystyle ={
-            backgroundImage: "url('https://i.hizliresim.com/X5WbVZ.jpg')",
+            
           }
 
         return (
@@ -81,10 +80,14 @@ export default class LoginPage extends Component {
 
                <div style={loginstyle}>
                         <form onSubmit = {this.handleSubmit}>
-                            <h1 className="text-center header" > Login </h1>
+                            <h1 className="text-left header" > SIGN IN! </h1>
+                            <p>We're happy to see you return! Please sign in to continue!
+                            </p>
                             <div className="form-group" >
+                                <br></br>
+                                <br></br>
                                 <label > Username </label>
-                                <input className="form-control" placeholder= "Username" type="text" 
+                                <input className="form-control" name= "username" placeholder= "Username" type="text" 
                                 value = {this.state.username}
                                 onChange = {this.handleChange}
                                 required />
@@ -97,11 +100,20 @@ export default class LoginPage extends Component {
                                 onChange = {this.handleChange}
                                 required/>
                             </div>
+                            <br></br>
+                                <br></br>
+                                
                             <div className="text-center" >
-                                <button className="btn btn-success" style = {buttonstylelogin}>  Login </button>
+                                <button className="btn btn-success" style = {buttonstylelogin}>  Sign In</button>
                                 <br /><br />
-                                <button className="btn btn-success" style = {buttonstylelogin}> Sign Up </button>
-                            </div> </form> 
+                                <br></br>
+                                <br></br>
+                                <p>Don't you have an account? Then sign up!</p>
+                                <button className="btn btn-primary" style = {buttonstylelogin}> Sign Up</button>
+                            </div> 
+                                <br></br>
+                                <br></br>
+                                </form> 
 
                             </div>
                 </Container>

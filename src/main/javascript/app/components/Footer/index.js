@@ -1,30 +1,26 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import {Container, Wrapper, Row, Column, Link, Title} from './styles/footer'
 
-import A from 'components/A';
-import LocaleToggle from 'containers/LocaleToggle';
-import Wrapper from './Wrapper';
-import messages from './messages';
 
-function Footer() {
-  return (
-    <Wrapper>
-      <section>
-        <FormattedMessage {...messages.licenseMessage} />
-      </section>
-      <section>
-        <LocaleToggle />
-      </section>
-      <section>
-        <FormattedMessage
-          {...messages.authorMessage}
-          values={{
-            author: <A href="https://twitter.com/mxstbr">Max Stoiber</A>,
-          }}
-        />
-      </section>
-    </Wrapper>
-  );
+export default function Footer({children, ...restProps}){
+
+return <Container {...restProps}>{children}</Container>
 }
 
-export default Footer;
+Footer.Wrapper = function FooterWrapper({children, ...restProps}){
+  return <Wrapper {...restProps}>{children}</Wrapper>
+}
+
+Footer.Row = function FooterRow({children, ...restProps}){
+  return <Row {...restProps}>{children}</Row>
+}
+Footer.Column = function FooterColumn({children, ...restProps}){
+  return <Column {...restProps}>{children}</Column>
+}
+Footer.Link = function FooterLink({children, ...restProps}){
+  return <Link {...restProps}>{children}</Link>
+}
+
+Footer.Title = function FooterTitle({children, ...restProps}){
+  return <Title {...restProps}>{children}</Title>
+}

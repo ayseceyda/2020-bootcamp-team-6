@@ -24,6 +24,11 @@ class ListAnimalComponent extends Component {
             opacity: "0.9",
           }
 
+          const animalListtyle = {
+              width: "100px",
+              height: "100px"
+          }
+
         return (
             <div>
                 <h2 className="text-center" >Animals</h2>
@@ -31,6 +36,7 @@ class ListAnimalComponent extends Component {
                     <table className = "table table-striped table-bordered">
                         <thead>
                             <tr>
+                                <th>Animal Image</th>
                                 <th>Animal Name</th>
                                 <th>Animal Breed</th>
                                 <th>Animal Age</th>
@@ -46,6 +52,7 @@ class ListAnimalComponent extends Component {
                                 this.state.animals.map(
                                     animal =>
                                     <tr key = {animal.id}>
+                                        <td><img src ={animal.animalImage} style = {animalListtyle}></img></td>
                                         <td>{animal.name}</td>
                                         <td>{animal.breed}</td>
                                         <td>{animal.age}</td>
