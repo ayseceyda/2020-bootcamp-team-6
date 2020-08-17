@@ -1,6 +1,6 @@
-# Fluffy Paws Shelter
+# Fluffy Paws Shelter: Transparent, Reliable and Susceptible Animal Shelter System
 
-## Team-6:
+## Team-6
 
 ### **Mentor: Alihan Bilgin**
 
