@@ -1,5 +1,40 @@
-# Team-6 Project: Fluffy Paws Shelter
+# Fluffy Paws Shelter
 
+##Team-6:
+###**Mentor: Alihan Bilgin
+###**Members:**
+* Atakan Güven
+* Ayşe Ceyda Ölmez
+* Hilmi Cihan Meral
+* Özge Kocaoğlu
+* Tolga Sarıuslu
+
+**Fluffy Paws Shelter**, is an internet application based on up-to-date data that gathers official institutions, volunteer organizations and those who want to own animals under one roof, based on improving the living conditions of shelter animals.
+
+In our country, stray animals face considerable ratios of violence, assault and death. The shelters have conspicuous problems, such as: 
+* Overpopulation, 
+* Hunger,  
+* Lack of Space,  
+* Illegal Euthanasia and death ratio. 
+  
+The designed system aims to build a solid bridge between shelter animals and humans. Considering that the content of the project extends to all areas of life such as education, social life and health, in the long term, the negative situations such as abandonment, violence and cruelty inflicted on stray animals will be prevented.  
+
+The objectives of Fluffy Paws Shelter are listed as follows: 
+* Providing solutions to the ongoing problems of stray animals with modern and contemporary suggestions, 
+* Provide a reliable match between shelter animals and their prospective owners, approved by experts, 
+* To make a permanent ownership operations in animal shelters traceable, 
+* Preventing illegal sales in pet shops and through social media, 
+* Raising awareness about animal rights in the community and promoting the concept of volunteerism in animal shelters.
+
+Fluffy Paws Shelter application follows these steps to get adopt a pet:   
+
+**Step 1:** Applicant fills a form which includes a detailed house plan info, his/her living conditions, working hours and family info. 
+
+**Step 2:** The application form is examined and an interview is carried out, if approval is obtained from experts for a possible match.
+
+**Step 3:** Approval is given, if a harmony is caught between the pet and the prospective owner at the end of the interview. In the next process, in order for the pet to adapt to ownership, they are vaccinated by experts and the health report is completed.
+
+## Analysis Report
 
 ![FR1](https://user-images.githubusercontent.com/29989590/90433043-e3099a00-e0d3-11ea-8693-240cad1238c3.png)
 
@@ -21,11 +56,4 @@
 
 ![uc9-10](https://user-images.githubusercontent.com/29989590/90434352-ef8ef200-e0d5-11ea-937a-dd7c9bcbbf94.png)
 
-### Class Diagram
-
-class diagram here.
-
-### Use-Case Diagram
-
-![Use-Case-Diagram](https://user-images.githubusercontent.com/29989590/90434537-41d01300-e0d6-11ea-8655-bf6309567800.jpg)
 
