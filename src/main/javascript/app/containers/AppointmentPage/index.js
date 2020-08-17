@@ -8,7 +8,7 @@ import {
 } from 'react-bootstrap';
 
 import DatePickerComponent from './components/date-picker/date-picker.js';
-
+import Footer from '../../components/Footer/Footer.jsx';
 export default class AppointmentPage extends Component{
     
     render(){
@@ -44,6 +44,7 @@ export default class AppointmentPage extends Component{
     
                         </div>
             </Container>
+            <Footer/>
             </div>
 
         );

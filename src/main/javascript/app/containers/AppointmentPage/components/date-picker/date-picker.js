@@ -7,7 +7,7 @@ export default class DatePickerComponent extends React.Component {
     constructor() {
         super();
         var date = new Date();
-        const format1 = "yyyy-MM-DThh:mm"
+        const format1 = "yyyy-MM-DTHH:MM"
       const  formatedDate = new moment(date).format(format1);
        
        
@@ -17,7 +17,7 @@ export default class DatePickerComponent extends React.Component {
             selectedDate: formatedDate
         };
 
-        console.log(formatedDate);
+        
        
     }
 

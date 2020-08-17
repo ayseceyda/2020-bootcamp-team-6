@@ -7,6 +7,7 @@ import {
 import NavbarComponent from '../../components/navbar/navbar.js';
 import FormComponent from './components/form/form.js';
 import MapContainer from './components/google-map/google-map';
+import Footer from '../../components/Footer/Footer.jsx';
 export default class ContactPage extends Component {
 
     render() {
@@ -16,6 +17,7 @@ export default class ContactPage extends Component {
            <Container>
            <FormComponent/> 
            </Container>     
+           <Footer/>
         </React.Fragment>
         );
     }
