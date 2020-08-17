@@ -5,8 +5,8 @@ import {
     Col
 } from 'react-bootstrap';
 import NavbarComponent from '../../components/navbar/navbar.js';
-import MapContainer from './components/google-map/google-map';
 import FormComponent from './components/form/form.js';
+import MapContainer from './components/google-map/google-map';
 export default class ContactPage extends Component {
 
     render() {
@@ -14,14 +14,8 @@ export default class ContactPage extends Component {
             <React.Fragment >
             <NavbarComponent />
            <Container>
-            <MapContainer/>
-
-            <FormComponent/>
-           </Container>
-          
-        
-                     
-         
+           <FormComponent/> 
+           </Container>     
         </React.Fragment>
         );
     }

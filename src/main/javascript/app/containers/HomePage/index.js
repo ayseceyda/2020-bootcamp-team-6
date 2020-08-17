@@ -33,7 +33,6 @@ import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-
 import { 
   Button,
   Container,
@@ -51,6 +50,7 @@ import {
  import DataTableComponent from './components/data-table/data-table.js';
 
 import ListAnimalComponent from './/components/ListAnimalComponent.jsx';
+import Footer from './components/Footer.jsx';
 const key = 'home';
 
 export function HomePage({
@@ -82,11 +82,13 @@ export function HomePage({
     <CarouselComponent/>
     <JumbotronComponent/>
     <CardComponent/>
-    <Container>
     <ListAnimalComponent />
+    <Container>
     <DataTableComponent/>
     </Container>
-
+    <br></br>
+    <br></br>
+    <Footer />
   </React.Fragment>
 
    

@@ -15,6 +15,7 @@ class ListAnimalComponent extends Component {
     componentDidMount(){
         AnimalService.getAnimals().then((res) =>{
             this.setState({animals: res.data});
+
         });
     }
     render() {
@@ -72,3 +73,4 @@ class ListAnimalComponent extends Component {
 }
 
 export default ListAnimalComponent;
+

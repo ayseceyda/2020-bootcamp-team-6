@@ -15,7 +15,7 @@ class SimpleMap extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div className="map" style={{ height: '60vh', width: '60%' }}>
+      <div className="map">
         <GoogleMapReact 
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}

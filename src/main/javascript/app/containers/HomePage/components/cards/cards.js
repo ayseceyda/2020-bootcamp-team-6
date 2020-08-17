@@ -26,10 +26,13 @@ export default class CardComponent extends Component {
     }
     render() {
         const cardstyle = {
+            margin: "-0,5% 0% 0% 70%",
+            align: "center",
+            width: "100px",
           }
         return (
            
-            <CardGroup  style = {cardstyle}>
+            <CardGroup>
                  {
                 this.state.animals.map(
                     animal =>
@@ -43,10 +46,8 @@ export default class CardComponent extends Component {
                 </Card.Text>
                         
                     </Card.Body>
-                    <Container>
-                <Button  variant="primary">See</Button><br /><br />
+                <Button style ={cardstyle} >See</Button><br /><br />
                         <Button href="/appointment" variant="primary">Adopt</Button><br /><br />
-                        </Container>
                     <Card.Footer>
                         <small className="text-muted">Last updated 3 mins ago</small>
                     </Card.Footer>
