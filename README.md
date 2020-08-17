@@ -1,8 +1,10 @@
 # Fluffy Paws Shelter
 
-##Team-6:
-###**Mentor: Alihan Bilgin
-###**Members:**
+## Team-6:
+
+### **Mentor: Alihan Bilgin**
+
+### **Members:**
 * Atakan Güven
 * Ayşe Ceyda Ölmez
 * Hilmi Cihan Meral
