@@ -38,12 +38,12 @@ export default class AccountSettingsPage extends React.Component {
 			  
 			  <Form.Control type="password" placeholder="" />
 			</Form.Group>
-		   
+			
 			<Form.Group name="address_box"controlId="address_change">
 			  <Form.Label>Add New Address</Form.Label>
 			  <Form.Control className="textarea" as="textarea" rows="3" width="200px" htmlSize="5"/>
 			</Form.Group>	
-			<Button className="save-button" type="submit" variant="outline-secondary">Save</Button>
+			<Button className="save-button" type="submit" variant="success">Save</Button>
 		  </Form>
 		  
 					</Col>
