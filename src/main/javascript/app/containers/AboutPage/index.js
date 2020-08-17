@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import Footer from '../../components/Footer/Footer.jsx';
+import {
+	Container,
+	Table
+	
+} from 'react-bootstrap';
+import './style/style.css';
+import NavbarComponent from '../../components/navbar/navbar.js';
 export default class AboutPage extends Component{
 
     render(){
@@ -34,6 +41,8 @@ export default class AboutPage extends Component{
                 </Table>
             </div>
  </div>
+
+ <Footer/>
 
             </React.Fragment>
         );

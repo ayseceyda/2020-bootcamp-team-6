@@ -12,11 +12,11 @@ export default class RegisterPage extends Component {
     render() {
         const registerStyle = {
             padding: "2%",
-            width: "40%",
+            width: "70%",
             backgroundColor: "#e4dbd9",
-            margin: "3% 0% 0% 28.5%",
+            margin: "3% 0% 0% 20%",
             backgroundColor: "#f9ebee",
-            opacity: "0.8",
+            opacity: "0.9",
            
           }
        

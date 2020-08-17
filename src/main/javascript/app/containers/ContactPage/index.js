@@ -14,8 +14,9 @@ export default class ContactPage extends Component {
         return (
             <React.Fragment >
             <NavbarComponent />
+            <FormComponent/> 
            <Container>
-           <FormComponent/> 
+           
            </Container>     
            <Footer/>
         </React.Fragment>

@@ -1,17 +1,15 @@
 .about-page{
     background-color: #f8f9fa;
-    margin-top: 2%;
-    height: 670px;
-    width: 1300px;
+    height: 100%;
+    width: 100%;
 }
 
 .about-page-shadow{
         background-color:#f8f9fa;
-        margin-top: 2%;
         height: 670px;
-        width: 1300px;
+        width: 100%;
         opacity: 0.9;
-        margin-left: 5%;
+
 }
 
 .h2-textstyle{

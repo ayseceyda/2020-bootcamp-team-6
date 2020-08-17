@@ -38,7 +38,7 @@ export default class FormComponent extends Component {
 		   
 			<Form.Group name="address_box"controlId="address_change">
 			  <Form.Label> &nbsp; &nbsp; &nbsp; COMMENTS</Form.Label>
-			  <Form.Control className="textarea" as="textarea" rows="3" width="100px" htmlSize="5" placeholder="comments..."/>
+			  <Form.Control className="textarea" as="textarea" rows="3" width="200px" htmlSize="5" placeholder="comments..."/>
 			  
 			</Form.Group>	
 			<Button className="contact-submit-button" type="submit" variant="primary">Submit</Button>

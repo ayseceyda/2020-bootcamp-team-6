@@ -25,7 +25,6 @@ export default class TabComponent extends Component{
            
             <Container >
                
-                <h1 className="text-center"> REGISTER </h1>
             <Tabs 
 				id="controlled-tab-example"
 				activeKey={this.state.key} onSelect={this.handleClick}
