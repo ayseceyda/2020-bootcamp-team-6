@@ -34,7 +34,7 @@ export default class NavbarComponent extends Component {
                             <NavDropdown title="Account" id="basic-nav-dropdown" drop="left">
                                 <NavDropdown.Item href="/login">Sign In</NavDropdown.Item>
 <NavDropdown.Item href="/account-settings" >Account Settings</NavDropdown.Item>
-<NavDropdown.Item href="/sign-up" >Sign Up</NavDropdown.Item>
+<NavDropdown.Item href="/register" >Sign Up</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>

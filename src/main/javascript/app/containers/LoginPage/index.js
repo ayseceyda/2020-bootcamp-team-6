@@ -109,7 +109,7 @@ export default class LoginPage extends Component {
                                 <br></br>
                                 <br></br>
                                 <p>Don't you have an account? Then sign up!</p>
-                                <button className="btn btn-primary" style = {buttonstylelogin}> Sign Up</button>
+                                <button href="/sign-up" className="btn btn-primary" style = {buttonstylelogin}> Sign Up</button>
                             </div> 
                                 <br></br>
                                 <br></br>

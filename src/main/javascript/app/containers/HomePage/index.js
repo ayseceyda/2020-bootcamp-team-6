@@ -49,7 +49,11 @@ import {
  import CardComponent from './components/cards/cards.js';
  import DataTableComponent from './components/data-table/data-table.js';
 
+<<<<<<< HEAD
 import ListAnimalComponent from './components/datatable/ListAnimalComponent';
+=======
+import ListAnimalComponent from './components/ListAnimalComponent.jsx';
+>>>>>>> 37127b9d14815e4a134ba6d2bb0c0befdf393a87
 import Footer from './components/Footer.jsx';
 const key = 'home';
 
