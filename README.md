@@ -11,9 +11,9 @@
 * Özge Kocaoğlu
 * Tolga Sarıuslu
 
-### **About Fluffy Paws**
+## About Fluffy Paws
 
-**Fluffy Paws Shelter**, is an internet application based on up-to-date data that gathers official institutions, volunteer organizations and those who want to own animals under one roof, based on improving the living conditions of shelter animals.
+Fluffy Paws Shelter, is an internet application based on up-to-date data that gathers official institutions, volunteer organizations and those who want to own animals under one roof, based on improving the living conditions of shelter animals.
 
 In our country, stray animals face considerable ratios of violence, assault and death. The shelters have conspicuous problems, such as: 
 * Overpopulation, 
