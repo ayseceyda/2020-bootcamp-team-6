@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import AnimalService from '../../../services/AnimalService'
+import AnimalService from '../../../../services/AnimalService';
+import TableHeader from "./Header/index";
+import Pagination from "./Pagination/index.js";
+import Search from "./Search/index.js";
 
 class ListAnimalComponent extends Component {
     constructor(props){
         super(props)
 
         this.state = {
-            animals: []
+            animals: [],
+            isLoading: true
         }
     }
 
 
 
     componentDidMount(){
-        AnimalService.getAnimals().then((res) =>{
-            this.setState({animals: res.data});
-
-        });
+        this.setState({isLoading:true});
+        fetch('http://localhost:8086/api/v1/animals')
+        .then(reponse => reponse.json())
+        .then(data => this.setState({animals: data, isLoading: false}));
     }
     render() {
 
@@ -30,11 +34,25 @@ class ListAnimalComponent extends Component {
               height: "100px"
           }
 
+          const divstyle = {
+            backgroundColor: "#f8f9fa",
+            
+            width: "80%",
+            height: "100%"
+          }
+          const{animals, isLoading} = this.state;
+
+          if(isLoading){
+              return <p>Loading...</p>;
+          }
+
         return (
-            <div>
-                <h2 className="text-center" >Animals</h2>
+            <div style = {divstyle}>
+                    <Pagination/>
+                    <Search/>
                 <div className = "row"  style = {liststyle}>
-                    <table className = "table table-striped table-bordered">
+
+                    <table className = "table table-borderless " cellspacing="0" width="20%">
                         <thead>
                             <tr>
                                 <th>Animal Image</th>
@@ -50,10 +68,10 @@ class ListAnimalComponent extends Component {
 
                         <tbody>
                             {
-                                this.state.animals.map(
+                                animals.map(
                                     animal =>
                                     <tr key = {animal.id}>
-                                        <td><img src ={animal.animalImage} style = {animalListtyle}></img></td>
+                                        <td className = "data-click-to-select"><img src ={animal.animalImage} style = {animalListtyle}></img></td>
                                         <td>{animal.name}</td>
                                         <td>{animal.breed}</td>
                                         <td>{animal.age}</td>
@@ -66,6 +84,7 @@ class ListAnimalComponent extends Component {
                             }
                         </tbody>
                     </table>
+                   
                 </div>
             </div>
         );
