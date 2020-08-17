@@ -10,7 +10,7 @@ export default class JumbotronComponent extends Component {
     INFORMATION ABOUT WEBSITE!
   </p>
   <p>
-    <Button variant="primary">Learn more</Button>
+    <Button href ="/about" variant="primary">Learn more</Button>
   </p>
 </Jumbotron>
         );

@@ -49,8 +49,8 @@ import {
  import CardComponent from './components/cards/cards.js';
  import DataTableComponent from './components/data-table/data-table.js';
 
-import ListAnimalComponent from './components/ListAnimalComponent.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+import ListAnimalComponent from './components/datatable/ListAnimalComponent';
+import Footer from './components/Footer.jsx';
 const key = 'home';
 
 export function HomePage({
@@ -78,16 +78,12 @@ export function HomePage({
   return (
  <React.Fragment>
     <NavbarComponent/>  
-    
     <CarouselComponent/>
     <JumbotronComponent/>
     <CardComponent/>
     <ListAnimalComponent />
     <Container>
-    <DataTableComponent/>
     </Container>
-    <br></br>
-    <br></br>
     <Footer />
   </React.Fragment>
 
