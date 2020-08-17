@@ -7,7 +7,7 @@
 
 ![use cases](https://user-images.githubusercontent.com/29989590/90433163-10eede80-e0d4-11ea-94e1-6dc4ad67579d.png)
 
-![uc1](https://user-images.githubusercontent.com/29989590/90433693-e7828280-e0d4-11ea-896c-744d7a993104.png)
+![uc1-2](https://user-images.githubusercontent.com/29989590/90434009-6e375f80-e0d5-11ea-84d3-ef84a50e1c25.png)
 
 ![uc3](https://user-images.githubusercontent.com/29989590/90433896-3f20ee00-e0d5-11ea-84b5-698e7c0d8bd0.png)
 
