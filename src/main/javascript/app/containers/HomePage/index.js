@@ -50,7 +50,7 @@ import {
  import DataTableComponent from './components/data-table/data-table.js';
 
 import ListAnimalComponent from './components/datatable/ListAnimalComponent';
-import Footer from './components/Footer.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 const key = 'home';
 
 export function HomePage({
