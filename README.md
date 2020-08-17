@@ -2,14 +2,14 @@
 
 ## Team-6
 
-### **Mentor:** Alihan Bilgin
-
-### **Members:**
+#### **Members:**
 * Atakan Güven
 * Ayşe Ceyda Ölmez
 * Hilmi Cihan Meral
 * Özge Kocaoğlu
 * Tolga Sarıuslu
+
+#### **Mentor:** Alihan Bilgin
 
 ## About Fluffy Paws
 
@@ -60,6 +60,6 @@ Fluffy Paws Shelter application follows these steps to get adopt a pet:
 
 ![uc9-10](https://user-images.githubusercontent.com/29989590/90434352-ef8ef200-e0d5-11ea-937a-dd7c9bcbbf94.png)
 
-###### **Diagrams(Use-Case and Class) for the project:** https://github.com/eteration-bootcamp/2020-bootcamp-team-6/tree/master/diagrams
+* ###### **Diagrams(Use-Case and Class) for the project:** https://github.com/eteration-bootcamp/2020-bootcamp-team-6/tree/master/diagrams
 
-###### **Wireframes for the project:** https://github.com/eteration-bootcamp/2020-bootcamp-team-6/tree/master/wireframes
+* ###### **Wireframes for the project:** https://github.com/eteration-bootcamp/2020-bootcamp-team-6/tree/master/wireframes
