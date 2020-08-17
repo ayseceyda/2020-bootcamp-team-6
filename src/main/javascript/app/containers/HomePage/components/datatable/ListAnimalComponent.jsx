@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AnimalService from '../../../../services/AnimalService';
 import TableHeader from "./Header/index";
 import Pagination from "./Pagination/index.js";
 import Search from "./Search/index.js";

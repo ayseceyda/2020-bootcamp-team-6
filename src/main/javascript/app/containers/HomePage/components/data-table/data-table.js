@@ -4,7 +4,6 @@ import { Input } from "semantic-ui-react";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 import "./styles/style.css";
-import "../../../../services/AnimalService";
 
 const originalData = [
   { id: "1", animalBreed: "Beagle", animalAge: "6", animalStatus: "Shelter"},

@@ -27,7 +27,7 @@ export default class NavbarComponent extends Component {
                             <Image src="https://i.hizliresim.com/qKXQ6d.png" />
                             </a>
                             <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="#link">About</Nav.Link>
+                            <Nav.Link href="/about">About</Nav.Link>
                             <Nav.Link href="/contact">Contact</Nav.Link>
                         </Nav>
                         <Nav className="mr-left">

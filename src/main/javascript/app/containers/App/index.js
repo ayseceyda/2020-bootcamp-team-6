@@ -14,6 +14,7 @@ import { Switch, Route } from 'react-router-dom';
  import AccountSettingsPage from '../AccountSettingsPage/index.js';
  import AppointmentPage from '../AppointmentPage/index.js';
  import NotFoundPage from '../NotFoundPage/index';
+ import AboutPage from '../AboutPage/index';
 
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);
@@ -36,6 +37,7 @@ export default function App() {
         <Route exact path="/contact" component={ContactPage}/>
         <Route exact path="/appointment" component={AppointmentPage}/>
         <Route exact path="/account-settings" component={AccountSettingsPage}/>
+        <Route exact path= "/about" component = {AboutPage}/>
         <Route exact path="/*" component={NotFoundPage}/>
       </Switch>
     

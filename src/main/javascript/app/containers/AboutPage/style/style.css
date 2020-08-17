@@ -1,0 +1,25 @@
+.about-page{
+    background-color: #f8f9fa;
+    margin-top: 2%;
+    height: 670px;
+    width: 1300px;
+}
+
+.about-page-shadow{
+        background-color:#f8f9fa;
+        margin-top: 2%;
+        height: 670px;
+        width: 1300px;
+        opacity: 0.9;
+        margin-left: 5%;
+}
+
+.h2-textstyle{
+    margin-left: 5%;
+    
+}
+
+.p-style{
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-weight:normal;
+}
