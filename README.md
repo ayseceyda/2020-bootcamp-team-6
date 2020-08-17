@@ -21,3 +21,11 @@
 
 ![uc9-10](https://user-images.githubusercontent.com/29989590/90434352-ef8ef200-e0d5-11ea-937a-dd7c9bcbbf94.png)
 
+### Class Diagram
+
+class diagram here.
+
+### Use-Case Diagram
+
+![Use-Case-Diagram](https://user-images.githubusercontent.com/29989590/90434537-41d01300-e0d6-11ea-8655-bf6309567800.jpg)
+
