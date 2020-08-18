@@ -5,6 +5,7 @@ import {
 import NavbarComponent from '../../components/navbar/navbar.js';
 import axios from 'axios';
 import './components/styles/style.css';
+import AuthView from "../../components/AuthView";
 
 export default class LoginPage extends Component {
     constructor(props){
@@ -109,7 +110,7 @@ export default class LoginPage extends Component {
                                 <br></br>
                                 <br></br>
                                 <p>Don't you have an account? Then sign up!</p>
-                                <button href="/sign-up" className="btn btn-primary" style = {buttonstylelogin}> Sign Up</button>
+                                <button href="/register" className="btn btn-primary" style = {buttonstylelogin}> Sign Up</button>
                             </div> 
                                 <br></br>
                                 <br></br>

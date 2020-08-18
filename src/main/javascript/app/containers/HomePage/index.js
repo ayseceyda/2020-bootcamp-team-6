@@ -47,12 +47,10 @@ import {
  import CarouselComponent from './components/carousel/carousel.js';
  import JumbotronComponent from './components/jumbotron/jumbotron.js';
  import CardComponent from './components/cards/cards.js';
- import DataTableComponent from './components/data-table/data-table.js';
 
 import ListAnimalComponent from './components/datatable/ListAnimalComponent';
 import Footer from '../../components/Footer/Footer.jsx';
 const key = 'home';
-
 export function HomePage({
   username,
   loading,
@@ -82,8 +80,6 @@ export function HomePage({
     <JumbotronComponent/>
     <CardComponent/>
     <ListAnimalComponent />
-    <Container>
-    </Container>
     <Footer />
   </React.Fragment>
 

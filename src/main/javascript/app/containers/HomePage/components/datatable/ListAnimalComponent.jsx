@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import TableHeader from "./Header/index";
 import Pagination from "./Pagination/index.js";
 import Search from "./Search/index.js";
-
+import {MDBTable, MDBTableBody, MDBTableHead, MDBDataTable} from 'mdbreact';
+import {Jumbotron, Container} from 'react-bootstrap';
+import './style/style.css'
 class ListAnimalComponent extends Component {
     constructor(props){
         super(props)
@@ -21,6 +22,7 @@ class ListAnimalComponent extends Component {
         .then(reponse => reponse.json())
         .then(data => this.setState({animals: data, isLoading: false}));
     }
+
     render() {
 
         const liststyle = {
@@ -46,13 +48,17 @@ class ListAnimalComponent extends Component {
           }
 
         return (
-            <div style = {divstyle}>
-                    <Pagination/>
-                    <Search/>
-                <div className = "row"  style = {liststyle}>
-
-                    <table className = "table table-borderless " cellspacing="0" width="20%">
-                        <thead>
+            <Jumbotron fluid>
+            <Container>
+              <h1>Adoptable Animals</h1>
+              <p>
+                Are you alone? Do you want a friend that is never leave you. Then adopt an animal!
+              </p>
+              <MDBTable responsive maxHeight="400px" hover entries={5} pagesamount={4}
+                    searchTop searchBottom={false}
+                    searching={true} 
+                    searchLabel="Search">
+                        <MDBTableHead>
                             <tr>
                                 <th>Animal Image</th>
                                 <th>Animal Name</th>
@@ -63,29 +69,28 @@ class ListAnimalComponent extends Component {
                                 <th>Animal Weight</th>
                                 <th>Animal Height</th>
                             </tr>
-                        </thead>
-
-                        <tbody>
+                            </MDBTableHead>
+                             <MDBTableBody>
                             {
                                 animals.map(
                                     animal =>
                                     <tr key = {animal.id}>
                                         <td className = "data-click-to-select"><img src ={animal.animalImage} style = {animalListtyle}></img></td>
-                                        <td>{animal.name}</td>
-                                        <td>{animal.breed}</td>
-                                        <td>{animal.age}</td>
-                                        <td>{animal.kind}</td>
-                                        <td>{animal.gender}</td>
-                                        <td>{animal.weight}</td>
-                                        <td>{animal.height}</td>
+                                        <td className= "textStyle">{animal.name}</td>
+                                        <td className= "textStyle">{animal.breed}</td>
+                                        <td className= "textStyle">{animal.age}</td>
+                                        <td className= "textStyle">{animal.kind}</td>
+                                        <td className= "textStyle">{animal.gender}</td>
+                                        <td className= "textStyle">{animal.weight}</td>
+                                        <td className= "textStyle">{animal.height}</td>
                                     </tr>
                                 )
                             }
-                        </tbody>
-                    </table>
-                   
-                </div>
-            </div>
+                        </MDBTableBody>
+                    </MDBTable>
+            </Container>
+          </Jumbotron>
+                    
         );
     }
 }

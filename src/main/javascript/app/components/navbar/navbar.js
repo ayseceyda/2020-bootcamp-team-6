@@ -13,6 +13,7 @@ import {
     Row
 } from 'react-bootstrap';
 
+import AuthView from '../AuthView';
 export default class NavbarComponent extends Component {
     
     render() {
@@ -30,13 +31,7 @@ export default class NavbarComponent extends Component {
                             <Nav.Link href="/about">About</Nav.Link>
                             <Nav.Link href="/contact">Contact</Nav.Link>
                         </Nav>
-                        <Nav className="mr-left">
-                            <NavDropdown title="Account" id="basic-nav-dropdown" drop="left">
-                                <NavDropdown.Item href="/login">Sign In</NavDropdown.Item>
-<NavDropdown.Item href="/account-settings" >Account Settings</NavDropdown.Item>
-<NavDropdown.Item href="/register" >Sign Up</NavDropdown.Item>
-                            </NavDropdown>
-                        </Nav>
+                        <AuthView />
                     </Navbar.Collapse>
                 </Navbar>
    
