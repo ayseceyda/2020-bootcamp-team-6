@@ -14,10 +14,22 @@ import './components/styles/style.css';
 export default class AccountSettingsPage extends React.Component {
 
 	render() {
+		const settingsStyle = {
+            padding: "4%",
+            width: "59%",
+            height: "80%",
+            backgroundColor: "#e4dbd9",
+            margin: "4% 0% 0% 19.5%",
+            backgroundColor: "#f9ebee",
+            opacity: "0.8",
+		  }
+		  const buttonstyleRegister = {
+            width: "10%",
+          }
 		return (
             <React.Fragment>
                 <NavbarComponent/>
-			<Container>
+			<Container style={settingsStyle}>
                 
                 <Row>
                     <Col md={3}>
@@ -43,7 +55,7 @@ export default class AccountSettingsPage extends React.Component {
 			  <Form.Label>Add New Address</Form.Label>
 			  <Form.Control className="textarea" as="textarea" rows="3" width="200px" htmlSize="5"/>
 			</Form.Group>	
-			<Button className="save-button" type="submit" variant="success">Save</Button>
+			<Button className="save-button" type="submit" variant="success" style={buttonstyleRegister}>Save</Button>
 		  </Form>
 		  
 					</Col>

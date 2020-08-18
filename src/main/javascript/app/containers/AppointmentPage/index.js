@@ -39,7 +39,7 @@ export default class AppointmentPage extends Component{
                         <div className="form-group" >
                         <DatePickerComponent />
                         </div>
-                        <Button variant="outline-success" style={submitStyle} type="submit" >Submit</Button>
+                      
                         </form> 
     
                         </div>

@@ -7,8 +7,8 @@ import PersonalInfo from './personal-info';
 import LivingAreInfo from './living-area-info';
 import ReferencesInfo from './references-info';
 export default class TabComponent extends Component{
-    constructor(props, context) {
-		super(props, context);
+    constructor(props) {
+		super(props);
 		this.state = {
 			key: 1,
         };
