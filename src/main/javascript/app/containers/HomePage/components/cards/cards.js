@@ -7,22 +7,25 @@ import {
     ListGroup,
     ListGroupItem,
 } from 'react-bootstrap';
-
+import _ from 'lodash';
+import chunk from 'lodash/chunk';
 
 export default class CardComponent extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
-            animals: []
+            animals: [],
+            isLoading: true,
+            index: 2
         }
     }
-    componentDidMount(){
-        this.setState({isLoading:true});
+    componentDidMount() {
+        this.setState({ isLoading: true });
         fetch('http://localhost:8086/api/v1/animals')
-        .then(reponse => reponse.json())
-        .then(data => this.setState({animals: data, isLoading: false}));
+            .then(reponse => reponse.json())
+            .then(data => this.setState({ animals: data, isLoading: false }));
     }
 
 
@@ -31,50 +34,47 @@ export default class CardComponent extends Component {
             margin: "0% 0% 0% 70%",
             align: "center",
             width: "100px",
-          }
+        }
+        const { animals, isLoading } = this.state;
+
+        if (isLoading) {
+            return <p>Loading...</p>;
+        }
+
+        const x = animals.slice(0, 2);
+
+
         return (
             <CardGroup>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-</CardGroup>
+                {
+                    x.map(
+                        animal => {
+                            return (
+                                <Card style={cardstyle} key = {animal.id}>
+                                    <Card.Img variant="top" src={animal.animalImage} />
+                                    <Card.Body>
+                                        <Card.Title>{animal.name}</Card.Title>
+                                        <Card.Text>
+                                            <span>Breed : {animal.breed}</span>
+                                            <span>Kind: {animal.kind}</span>
+                                        </Card.Text>
+                                    </Card.Body>
+                                    <ListGroup className="list-group-flush">
+                                        <ListGroupItem><p>Gender: </p> {animal.gender}</ListGroupItem>
+                                        <ListGroupItem><p>Age: </p> {animal.age}</ListGroupItem>
+                                    </ListGroup>
+                                    <Card.Body>
+                                        <Card.Link href="#">See</Card.Link>
+                                        <Card.Link href="">Adopt</Card.Link>
+                                    </Card.Body>
+                                </Card>
+                            )
+                        }
+
+                    )
+                }
+
+            </CardGroup>
 
 
         );

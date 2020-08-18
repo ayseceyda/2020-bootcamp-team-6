@@ -54,10 +54,7 @@ class ListAnimalComponent extends Component {
               <p>
                 Are you alone? Do you want a friend that is never leave you. Then adopt an animal!
               </p>
-              <MDBTable responsive maxHeight="400px" hover entries={5} pagesamount={4}
-                    searchTop searchBottom={false}
-                    searching={true} 
-                    searchLabel="Search">
+              <MDBTable responsive maxHeight="400px" hover entries={5} pagesamount={4}>
                         <MDBTableHead>
                             <tr>
                                 <th>Animal Image</th>

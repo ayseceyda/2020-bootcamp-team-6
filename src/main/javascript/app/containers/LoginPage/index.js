@@ -6,6 +6,7 @@ import NavbarComponent from '../../components/navbar/navbar.js';
 import axios from 'axios';
 import './components/styles/style.css';
 import AuthView from "../../components/AuthView";
+import {Link} from 'react-router-dom';
 
 export default class LoginPage extends Component {
     constructor(props){
@@ -110,7 +111,7 @@ export default class LoginPage extends Component {
                                 <br></br>
                                 <br></br>
                                 <p>Don't you have an account? Then sign up!</p>
-                                <button href="/register" className="btn btn-primary" style = {buttonstylelogin}> Sign Up</button>
+                                <Link to = '/register' className="btn btn-primary" style = {buttonstylelogin}> Sign Up</Link>
                             </div> 
                                 <br></br>
                                 <br></br>

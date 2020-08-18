@@ -50,6 +50,7 @@ import {
 
 import ListAnimalComponent from './components/datatable/ListAnimalComponent';
 import Footer from '../../components/Footer/Footer.jsx';
+import DataTable from './components/data-table/DataTable';
 const key = 'home';
 export function HomePage({
   username,
@@ -62,9 +63,14 @@ export function HomePage({
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
 
+  const [animals, setAnimals] = React.useState([])
+
   useEffect(() => {
     // When initial state username is not null, submit the form to load repos
     if (username && username.trim().length > 0) onSubmitForm();
+    fetch('http://localhost:8086/api/v1/animals')
+            .then(reponse => reponse.json())
+            .then(data => setAnimals(data));
   }, []);
 
   const reposListProps = {
@@ -80,6 +86,7 @@ export function HomePage({
     <JumbotronComponent/>
     <CardComponent/>
     <ListAnimalComponent />
+    {animals ? <DataTable data = {animals} /> : null}
     <Footer />
   </React.Fragment>
 
