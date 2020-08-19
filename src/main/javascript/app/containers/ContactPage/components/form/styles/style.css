@@ -5,7 +5,7 @@
       
 }
 .contact-submit-button{
-    margin-left: 20%;
+    margin-left: 82%;
     resize: none;
     width: fit-content;
 
@@ -13,15 +13,17 @@
 
 
 .contact-div{
+    
     background-color: #f8f9fa;
     height: 500px;
-    width: 100%;
+    width: 150%;
     margin-left: 70%;
 }
 
 .contact-shadow-div{
+    padding: 1%;
     background-color:#f8f9fa;
-    height: 700px;
-    width: 100%;
+    height: 100%;
+    width: 1000%;
     opacity: 0.9;
 }

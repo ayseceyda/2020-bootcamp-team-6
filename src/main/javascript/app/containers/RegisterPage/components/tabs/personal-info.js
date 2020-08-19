@@ -79,9 +79,10 @@ export default class PersonalInfo extends Component {
     }
 
     render() {
+        
         return (
             
-            <form>
+            <form >
                 <img width="90%" src="https://i.hizliresim.com/bnpP1o.jpg"/>
                 <h1 className="text-center" > Personal Info </h1>
                 <div className="form-group" > <label > Name </label> <br /> <input type="text" name="firstName" placeholder="First Name" className="form-control" value={this.state.firstName} onChange={this.changeFirstNameHandler} /> <br />

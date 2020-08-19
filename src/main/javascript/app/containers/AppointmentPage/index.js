@@ -14,13 +14,13 @@ export default class AppointmentPage extends Component{
     
     render(){
         const appointmentBorderStyle = {
-            padding: "8%",
-            width: "59%",
-            height: "80%",
+            padding: "15.9%",
+            width: "100.1%",
+            height: "100%",
             backgroundColor: "#e4dbd9",
-            margin: "0% 0% 0% 0%",
+            margin: "0% % 0% 0%",
             backgroundColor: "#f9ebee",
-            opacity: "0.8",
+            opacity: "0.9",
           }
           const submitStyle = {
             width: "27%",
@@ -35,11 +35,15 @@ export default class AppointmentPage extends Component{
           }
         return(
             <div >
+               
             <NavbarComponent />
+            
             <table>
                 <tr>
                     <td style= {submitAppointment}>
                     <div style={appointmentBorderStyle}>
+                    <Col>
+                    <Row>
                     <form >
                         <h2 className="text-left header" > Appointment </h2>
                         <br></br>
@@ -51,14 +55,16 @@ export default class AppointmentPage extends Component{
                         </div>
                       
                         </form> 
-    
+                        </Row>
+                        </Col>
                         </div>
                     </td>
-                    <td style={submitStyle}><img src="https://i.hizliresim.com/WilYWz.jpg" weight='70%' height='50%'/></td>
+                    <td style={submitStyle}><img src="https://i.hizliresim.com/WilYWz.jpg" weight='70%' height='55%'/></td>
                 </tr>
             </table>
            
             <Footer/>
+           
             </div>
 
         );

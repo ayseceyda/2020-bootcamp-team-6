@@ -47,18 +47,18 @@ export default class DatePickerComponent extends React.Component {
     render() {
  
       const dateStyle = {
-        padding: "8%",
-        width: "59%",
-        height: "80%",
+        
+        width: "70%",
+        height: "50%",
         backgroundColor: "#e4dbd9",
-        margin: "0% 0% 0% 0%",
+        margin: "0% 0% 0% 15%",
         backgroundColor: "#f9ebee",
         opacity: "0.9",
       }
       const submitStyle = {
         width: "27%",
         height: "20%",
-        margin: "0% 0% 0% 36.5%",
+        margin: "0% 0% 0% 35%",
        
        
       }
@@ -80,8 +80,8 @@ export default class DatePickerComponent extends React.Component {
        
       <Fade in={this.state.open} >
         <div id="example-fade-text" className="text-center">
-       <h4> Appointment Date: {this.state.selectedDate.substring(0, this.state.selectedDate.lastIndexOf(this.state.seperator)+ this.state.seperator.length)} <br/>
-       {this.state.selectedDate.substring(11)}</h4>
+       <h5>Appointment Date: {this.state.selectedDate.substring(0, this.state.selectedDate.lastIndexOf(this.state.seperator)+ this.state.seperator.length)+ " " +(this.state.selectedDate.substring(11))}  </h5>
+       <h5>Address: New York, NY 10012, US</h5>
         </div>
       </Fade>
       <Button variant="outline-success" style={submitStyle} type="button" 
