@@ -13,8 +13,8 @@ export default class CarouselComponent extends Component {
 
           />
           <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h3>A.A. Milne</h3>
+      <p>"Some people talk to animals. Not many listen though. That's the problem."</p>
     </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item >
@@ -25,8 +25,8 @@ export default class CarouselComponent extends Component {
 
           />
           <Carousel.Caption>
-          <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Irene M. Pepperberg</h3>
+          <p>"Clearly, animals know more than we think, and think a great deal more than we know." </p>
 
           </Carousel.Caption>
         </Carousel.Item>
@@ -38,8 +38,8 @@ export default class CarouselComponent extends Component {
 
           />
           <Carousel.Caption>
-          <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Gregory Maguire</h3>
+      <p>"Animals are born who they are, accept it, and that is that. They live with greater peace than people do."</p>
 
           </Carousel.Caption>
         </Carousel.Item>
