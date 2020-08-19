@@ -39,7 +39,9 @@ export default class TabComponent extends Component{
 				</Tab>
 				<Tab eventKey={3} title="References Info" >
 					<ReferencesInfo/>
-                    <Button type="submit" variant="success" >Submit</Button>
+                    <form method="get" action="http://localhost:3000/">
+                    <Button type="submit" variant="success" onClick={()=>this.handleClick("3")}>Submit</Button>
+                    </form>
 				</Tab>
 			</Tabs>
             </Container>
