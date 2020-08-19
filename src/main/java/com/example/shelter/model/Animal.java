@@ -26,6 +26,7 @@ public class Animal {
 	private String gender;
 	
 	private String animalImage;
+	private String animalStatus;
 	
 	public String getGender() {
 		return gender;
@@ -80,6 +81,12 @@ public class Animal {
 	}
 	public void setAnimalImage(String animalImage) {
 		this.animalImage = animalImage;
+	}
+	public String getAnimalStatus() {
+		return animalStatus;
+	}
+	public void setAnimalStatus(String animalStatus) {
+		this.animalStatus = animalStatus;
 	}
 	
 	

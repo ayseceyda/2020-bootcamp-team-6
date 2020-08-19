@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { DataTable } from 'mdbreact';
+import { MDBDataTable } from 'mdbreact';
 
 export default function WithCSV(props) {
     
@@ -7,6 +7,15 @@ export default function WithCSV(props) {
     console.log(props);
     const data = {
         columns: [
+            {
+                label: 'ID',
+                field: 'id',
+                width: 150,
+                attributes: {
+                    'aria-controls': 'DataTable',
+                    'aria-label': 'Name',
+                },
+            },
             {
                 label: 'Name',
                 field: 'name',
@@ -17,36 +26,56 @@ export default function WithCSV(props) {
                 },
             },
             {
-                label: 'Position',
-                field: 'position',
+                label: 'Breed',
+                field: 'breed',
                 width: 270,
-            },
-            {
-                label: 'Office',
-                field: 'office',
-                width: 200,
             },
             {
                 label: 'Age',
                 field: 'age',
+                width: 200,
+            },
+            {
+                label: 'Kind',
+                field: 'kind',
                 sort: 'asc',
                 width: 100,
             },
             {
-                label: 'Start date',
-                field: 'date',
-                sort: 'disabled',
+                label: 'Gender',
+                field: 'gender',
+                sort: 'arc',
                 width: 150,
             },
             {
-                label: 'Salary',
-                field: 'salary',
-                sort: 'disabled',
+                label: 'Weight',
+                field: 'weight',
+                sort: 'arc',
                 width: 100,
             },
+            {
+                label: 'Height',
+                field: 'height',
+                sort: 'arc',
+                width: 100,
+            },
+            {
+                label: 'Where is the animal?',
+                field: 'animalStatus',
+                sort: 'arc',
+                width: 100,
+            },
+
         ],
         rows: props.data,
     };
 
-    return <DataTable hover data={data} exportToCSV proSelect />;
+    return <MDBDataTable 
+            hover
+            striped
+            bordered
+            small
+            entriesOptions={[5, 20, 25]} entries={7} pagesAmount={4}
+            searchTop searchBottom={false}
+            data={data} exportToCSV proSelect />;
 }

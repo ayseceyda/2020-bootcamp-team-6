@@ -7,9 +7,7 @@ import {
     ListGroup,
     ListGroupItem,
 } from 'react-bootstrap';
-import _ from 'lodash';
-import chunk from 'lodash/chunk';
-
+import './style/style.css'
 export default class CardComponent extends Component {
 
     constructor(props) {
@@ -31,7 +29,7 @@ export default class CardComponent extends Component {
 
     render() {
         const cardstyle = {
-            margin: "0% 0% 0% 70%",
+            margin: "0% 0% 0% 0%",
             align: "center",
             width: "100px",
         }
@@ -41,7 +39,7 @@ export default class CardComponent extends Component {
             return <p>Loading...</p>;
         }
 
-        const x = animals.slice(0, 2);
+        const x = animals.slice(2, 7);
 
 
         return (
@@ -53,19 +51,19 @@ export default class CardComponent extends Component {
                                 <Card style={cardstyle} key = {animal.id}>
                                     <Card.Img variant="top" src={animal.animalImage} />
                                     <Card.Body>
-                                        <Card.Title>{animal.name}</Card.Title>
-                                        <Card.Text>
-                                            <span>Breed : {animal.breed}</span>
-                                            <span>Kind: {animal.kind}</span>
+                                        <Card.Title className = "cardStyle">{animal.name}</Card.Title>
+                                        <Card.Text className = "cardStyle">
+                                            <span>Breed : &nbsp;{animal.breed}</span><br></br>
+                                            <span>Kind: &nbsp; {animal.kind}</span>
                                         </Card.Text>
                                     </Card.Body>
                                     <ListGroup className="list-group-flush">
-                                        <ListGroupItem><p>Gender: </p> {animal.gender}</ListGroupItem>
-                                        <ListGroupItem><p>Age: </p> {animal.age}</ListGroupItem>
+                                        <ListGroupItem className = "cardStyle"><p>Gender: {animal.gender}</p> </ListGroupItem>
+                                        <ListGroupItem className = "cardStyle"><p>Age: {animal.age}</p> </ListGroupItem>
                                     </ListGroup>
                                     <Card.Body>
                                         <Card.Link href="#">See</Card.Link>
-                                        <Card.Link href="">Adopt</Card.Link>
+                                        <Card.Link href="/appointment">Adopt</Card.Link>
                                     </Card.Body>
                                 </Card>
                             )

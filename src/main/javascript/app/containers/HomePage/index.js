@@ -33,22 +33,22 @@ import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-import { 
+import {
   Button,
   Container,
+  Jumbotron,
   Row,
   Col,
   Carousel
- } from 'react-bootstrap';
- 
+} from 'react-bootstrap';
 
- // Components imports....
- import NavbarComponent from '../../components/navbar/navbar.js';
- import CarouselComponent from './components/carousel/carousel.js';
- import JumbotronComponent from './components/jumbotron/jumbotron.js';
- import CardComponent from './components/cards/cards.js';
 
-import ListAnimalComponent from './components/datatable/ListAnimalComponent';
+// Components imports....
+import NavbarComponent from '../../components/navbar/navbar.js';
+import CarouselComponent from './components/carousel/carousel.js';
+import JumbotronComponent from './components/jumbotron/jumbotron.js';
+import CardComponent from './components/cards/cards.js';
+
 import Footer from '../../components/Footer/Footer.jsx';
 import DataTable from './components/data-table/DataTable';
 const key = 'home';
@@ -69,8 +69,8 @@ export function HomePage({
     // When initial state username is not null, submit the form to load repos
     if (username && username.trim().length > 0) onSubmitForm();
     fetch('http://localhost:8086/api/v1/animals')
-            .then(reponse => reponse.json())
-            .then(data => setAnimals(data));
+      .then(reponse => reponse.json())
+      .then(data => setAnimals(data));
   }, []);
 
   const reposListProps = {
@@ -80,17 +80,24 @@ export function HomePage({
   };
 
   return (
- <React.Fragment>
-    <NavbarComponent/>  
-    <CarouselComponent/>
-    <JumbotronComponent/>
-    <CardComponent/>
-    <ListAnimalComponent />
-    {animals ? <DataTable data = {animals} /> : null}
-    <Footer />
-  </React.Fragment>
+    <React.Fragment>
+      <NavbarComponent />
+      <CarouselComponent />
+      <JumbotronComponent />
+      <CardComponent />
+      <Jumbotron fluid>
+        <Container>
+          <h1>Adoptable Animals</h1>
+          <p>
+            Are you alone? Do you want a friend that is never leave you. Then adopt an animal!
+              </p>
+          {animals ? <DataTable data={animals} /> : null}
+        </Container>
+      </Jumbotron>
+      <Footer />
+    </React.Fragment>
 
-   
+
   );
 }
 
