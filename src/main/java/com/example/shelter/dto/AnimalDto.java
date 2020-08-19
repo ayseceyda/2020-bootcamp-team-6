@@ -17,6 +17,8 @@ public class AnimalDto {
 	private String gender;
 	
 	private String animalImage;
+	
+	private String animalStatus;
 
 	public String getName() {
 		return name;
@@ -80,6 +82,14 @@ public class AnimalDto {
 
 	public void setAnimalImage(String animalImage) {
 		this.animalImage = animalImage;
+	}
+
+	public String getAnimalStatus() {
+		return animalStatus;
+	}
+
+	public void setAnimalStatus(String animalStatus) {
+		this.animalStatus = animalStatus;
 	}
 	
 	
