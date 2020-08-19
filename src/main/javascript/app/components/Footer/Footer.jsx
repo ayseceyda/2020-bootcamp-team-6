@@ -74,16 +74,16 @@ const FooterPagePro = () => {
             </h6>
             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
             <p>
-              <a href="#!">Your Account</a>
+              <a href="http://localhost:3000/register">Your Account</a>
             </p>
             <p>
-              <a href="#!">Adopt an Animal</a>
+              <a href="http://localhost:3000/">Adopt an Animal</a>
             </p>
             <p>
-              <a href="#!">Search Animals</a>
+              <a href="http://localhost:3000/">Search Animals</a>
             </p>
             <p>
-              <a href="#!">Find Your Friend!</a>
+              <a href="http://localhost:3000/">Find Your Friend!</a>
             </p>
           </MDBCol>
           <MDBCol md="4" lg="3" xl="3" className="mb-4">
