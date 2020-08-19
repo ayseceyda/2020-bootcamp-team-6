@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Pagination from "./Pagination/index.js";
-import Search from "./Search/index.js";
 import {MDBTable, MDBTableBody, MDBTableHead, MDBDataTable} from 'mdbreact';
 import {Jumbotron, Container} from 'react-bootstrap';
 import './style/style.css'
@@ -50,10 +48,7 @@ class ListAnimalComponent extends Component {
         return (
             <Jumbotron fluid>
             <Container>
-              <h1>Adoptable Animals</h1>
-              <p>
-                Are you alone? Do you want a friend that is never leave you. Then adopt an animal!
-              </p>
+              <h1>Avalaible Animals</h1>
               <MDBTable responsive maxHeight="400px" hover entries={5} pagesamount={4}>
                         <MDBTableHead>
                             <tr>
@@ -87,6 +82,8 @@ class ListAnimalComponent extends Component {
                     </MDBTable>
             </Container>
           </Jumbotron>
+
+          
                     
         );
     }
