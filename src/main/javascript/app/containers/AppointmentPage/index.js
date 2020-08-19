@@ -4,6 +4,7 @@ import {
     Container,
     Row,
     Table,
+    Col,
     Button
 } from 'react-bootstrap';
 
@@ -17,25 +18,34 @@ export default class AppointmentPage extends Component{
             width: "59%",
             height: "80%",
             backgroundColor: "#e4dbd9",
-            margin: "11% 0% 0% 15.5%",
+            margin: "0% 0% 0% 0%",
             backgroundColor: "#f9ebee",
             opacity: "0.8",
           }
           const submitStyle = {
             width: "27%",
             height: "20%",
-            margin: "-4% 0% 0% 36.5%",
-           
-           
+            margin: "0% 0% 0% 0%",  
+          }
+
+          const submitAppointment = {
+            width: "100%",
+            height: "100%",
+            margin: "0% 0% 0% 0%",  
           }
         return(
             <div >
             <NavbarComponent />
-            <Container >
-    
-           <div style={appointmentBorderStyle}>
+            <table>
+                <tr>
+                    <td style= {submitAppointment}>
+                    <div style={appointmentBorderStyle}>
                     <form >
-                        <h1 className="text-center header" > Appointment </h1>
+                        <h2 className="text-left header" > Appointment </h2>
+                        <br></br>
+                        <br></br>
+                        <p>Thank you to consider adoption! We're happy to see you here!</p>
+                        <p>Just pick a date and your appointment day will be set up.</p>
                         <div className="form-group" >
                         <DatePickerComponent />
                         </div>
@@ -43,7 +53,11 @@ export default class AppointmentPage extends Component{
                         </form> 
     
                         </div>
-            </Container>
+                    </td>
+                    <td style={submitStyle}><img src="https://i.hizliresim.com/WilYWz.jpg" weight='70%' height='50%'/></td>
+                </tr>
+            </table>
+           
             <Footer/>
             </div>
 

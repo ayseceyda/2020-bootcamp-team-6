@@ -16,7 +16,7 @@ export default class CardComponent extends Component {
         this.state = {
             animals: [],
             isLoading: true,
-            index: 2
+            index: 2,
         }
     }
     componentDidMount() {
@@ -25,7 +25,6 @@ export default class CardComponent extends Component {
             .then(reponse => reponse.json())
             .then(data => this.setState({ animals: data, isLoading: false }));
     }
-
 
     render() {
         const cardstyle = {

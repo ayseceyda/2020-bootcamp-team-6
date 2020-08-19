@@ -82,6 +82,7 @@ export function HomePage({
   return (
     <React.Fragment>
       <NavbarComponent />
+      <Container style = {{width: "1500px"}}></Container>
       <CarouselComponent />
       <JumbotronComponent />
       <CardComponent />
