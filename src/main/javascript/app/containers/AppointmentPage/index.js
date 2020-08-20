@@ -49,8 +49,11 @@ export default class AppointmentPage extends Component{
                         <br></br>
                         <br></br>
                         <p>Thank you to consider adoption! We're happy to see you here!</p>
-                        <p>Just pick a date and your appointment day will be set up.</p>
+                        <p>Just pick a date and your appointment day will be set up. You have to type your username.</p>
                         <div className="form-group" >
+
+                                <br></br>
+                                <br></br>
                         <DatePickerComponent />
                         </div>
                       

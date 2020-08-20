@@ -20,7 +20,7 @@ public class AnimalService {
 	@Autowired
 	private AnimalDao animalDao;
 	
-	public List<Animal> getAllAnimal(){
+	public List<Animal> getAllAnimals(){
 		return animalDao.getAllAnimals();
 	}
 	

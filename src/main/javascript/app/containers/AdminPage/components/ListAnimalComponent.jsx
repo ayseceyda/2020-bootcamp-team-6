@@ -1,93 +1,81 @@
-import React, { Component } from 'react';
-import {MDBTable, MDBTableBody, MDBTableHead, MDBDataTable} from 'mdbreact';
-import {Jumbotron, Container} from 'react-bootstrap';
-import './style/style.css'
-class ListAnimalComponent extends Component {
-    constructor(props){
-        super(props)
+import React, { useEffect } from 'react';
+import { MDBDataTable } from 'mdbreact';
 
-        this.state = {
-            animals: [],
-            isLoading: true
-        }
-    }
+export default function WithCSV(props) {
+    
 
+    console.log(props);
+    const data = {
+        columns: [
+            {
+                label: 'ID',
+                field: 'id',
+                width: 150,
+                attributes: {
+                    'aria-controls': 'DataTable',
+                    'aria-label': 'Name',
+                },
+            },
+            {
+                label: 'Name',
+                field: 'name',
+                width: 150,
+                attributes: {
+                    'aria-controls': 'DataTable',
+                    'aria-label': 'Name',
+                },
+            },
+            {
+                label: 'Breed',
+                field: 'breed',
+                width: 270,
+            },
+            {
+                label: 'Age',
+                field: 'age',
+                width: 200,
+            },
+            {
+                label: 'Kind',
+                field: 'kind',
+                sort: 'asc',
+                width: 100,
+            },
+            {
+                label: 'Gender',
+                field: 'gender',
+                sort: 'arc',
+                width: 150,
+            },
+            {
+                label: 'Weight',
+                field: 'weight',
+                sort: 'arc',
+                width: 100,
+            },
+            {
+                label: 'Height',
+                field: 'height',
+                sort: 'arc',
+                width: 100,
+            },
+            {
+                label: 'Where is the animal?',
+                field: 'animalStatus',
+                sort: 'arc',
+                width: 100,
+            },
 
+        ],
+        rows: props.data,
+    };
 
-    componentDidMount(){
-        this.setState({isLoading:true});
-        fetch('http://localhost:8086/api/v1/animals')
-        .then(reponse => reponse.json())
-        .then(data => this.setState({animals: data, isLoading: false}));
-    }
-
-    render() {
-
-        const liststyle = {
-            backgroundColor: "#f8f9fa",
-            opacity: "0.9",
-          }
-
-          const animalListtyle = {
-              width: "100px",
-              height: "100px"
-          }
-
-          const divstyle = {
-            backgroundColor: "#f8f9fa",
-            
-            width: "80%",
-            height: "100%"
-          }
-          const{animals, isLoading} = this.state;
-
-          if(isLoading){
-              return <p>Loading...</p>;
-          }
-
-        return (
-            <Jumbotron fluid>
-            <Container>
-              <h1>Avalaible Animals</h1>
-              <MDBTable responsive maxHeight="400px" hover entries={5} pagesamount={4}>
-                        <MDBTableHead>
-                            <tr>
-                                <th>Animal Image</th>
-                                <th>Animal Name</th>
-                                <th>Animal Breed</th>
-                                <th>Animal Age</th>
-                                <th>Animal Kind</th>
-                                <th>Animal Gender</th>
-                                <th>Animal Weight</th>
-                                <th>Animal Height</th>
-                            </tr>
-                            </MDBTableHead>
-                             <MDBTableBody>
-                            {
-                                animals.map(
-                                    animal =>
-                                    <tr key = {animal.id}>
-                                        <td className = "data-click-to-select"><img src ={animal.animalImage} style = {animalListtyle}></img></td>
-                                        <td className= "textStyle">{animal.name}</td>
-                                        <td className= "textStyle">{animal.breed}</td>
-                                        <td className= "textStyle">{animal.age}</td>
-                                        <td className= "textStyle">{animal.kind}</td>
-                                        <td className= "textStyle">{animal.gender}</td>
-                                        <td className= "textStyle">{animal.weight}</td>
-                                        <td className= "textStyle">{animal.height}</td>
-                                    </tr>
-                                )
-                            }
-                        </MDBTableBody>
-                    </MDBTable>
-            </Container>
-          </Jumbotron>
-
-          
-                    
-        );
-    }
+    return <MDBDataTable 
+            hover
+            striped
+            bordered
+            small
+            entriesOptions={[5, 20, 25]} entries={7} pagesAmount={4}
+            searchTop searchBottom={false}
+            data={data} exportToCSV proSelect />;
 }
-
-export default ListAnimalComponent;
-

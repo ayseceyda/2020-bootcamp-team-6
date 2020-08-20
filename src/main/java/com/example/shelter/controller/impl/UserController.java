@@ -16,6 +16,7 @@ import org.springframework.web.filter.CorsFilter;
 import com.example.shelter.model.User;
 import com.example.shelter.repository.UserRepository;
 
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("/api/v1")
 public class UserController {
@@ -31,6 +32,8 @@ public class UserController {
 	public User createUser(@RequestBody User user) {
 		return userRepository.save(user);
 	}
+	
+	
 	
 	
 }

@@ -1,103 +1,93 @@
-import React, { Component } from 'react';
-import {MDBTable, MDBTableBody, MDBTableHead} from 'mdbreact';
-import {Jumbotron, Container} from 'react-bootstrap';
-import './style/style.css'
-import UserService from "../../../services/UserService";
+import React, { useEffect } from 'react';
+import { MDBDataTable } from 'mdbreact';
 
-class ListUserComponent extends Component {
-    constructor(props){
-        super(props)
-
-        this.state = {
-            users: [],
-        }
-    }
-
-
-
-    componentDidMount(){
-        fetch('http://localhost:8086/users')
-        .then(reponse => reponse.json())
-        .then(data => this.setState({users: data}));
-    }
-
-    render() {
-
-        console.log(this.state.users);
-        const liststyle = {
-            backgroundColor: "#f8f9fa",
-            opacity: "0.9",
-          }
-
-          const animalListtyle = {
-              width: "100px",
-              height: "100px"
-          }
-
-          const divstyle = {
-            backgroundColor: "#f8f9fa",
-            
-            width: "80%",
-            height: "100%"
-          }
-
-        return (
-
-            <Jumbotron fluid>
-            <Container>
-              <h1>Users</h1>
-              <MDBTable responsive maxHeight="400px" hover entries={5} pagesamount={4}>
-                        <MDBTableHead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Surname</th>
-                                <th>Address</th>
-                                <th>Birthday</th>
-                                <th>Rent Info</th>
-                                <th>Pet Polisy</th>
-                                <th>Yard Info</th>
-                                <th>Live with Family?</th>
-                                <th>How many Child?</th>
-                                <th>Username</th>
-                                <th>Password</th>
-                                <th>Dangerous Enviroment Info</th>
-                            </tr>
-                            </MDBTableHead>
-                             <MDBTableBody>
-                            {
-                               
-                                this.props.users.map(
-                                    user=>{
-                                        return(
-                                            <tr key = {user.id}>
-                                            <td className= "textStyle">{user.name}</td>
-                                            <td className= "textStyle">{user.surname}</td>
-                                            <td className= "textStyle">{user.address}</td>
-                                            <td className= "textStyle">{user.birthday}</td>
-                                            <td className= "textStyle">{user.rentInfo}</td>
-                                            <td className= "textStyle">{user.petPolisy}</td>
-                                            <td className= "textStyle">{user.yardInfo}</td>
-                                            <td className= "textStyle">{user.familyInfo}</td>
-                                            <td className= "textStyle">{user.childCount}</td>
-                                            <td className= "textStyle">{user.username}</td>
-                                            <td className= "textStyle">{user.password}</td>
-                                            <td className= "textStyle">{user.isDanger}</td>
+export default function WithCSV(props) {
     
-                                        </tr>
-                                        )
-                                    }
-                                   
-                                )
-                            
-                        }
-                        </MDBTableBody>
-                    </MDBTable>
-            </Container>
-          </Jumbotron>
-                    
-        );
-    }
+
+    console.log(props);
+    const data = {
+        columns: [
+            {
+                label: 'Name',
+                field: 'name',
+                width: 150,
+                attributes: {
+                    'aria-controls': 'DataTable',
+                    'aria-label': 'Name',
+                },
+            },
+            {
+                label: 'Surname',
+                field: 'surname',
+                width: 150,
+                attributes: {
+                    'aria-controls': 'DataTable',
+                    'aria-label': 'Name',
+                },
+            },
+            {
+                label: 'Address',
+                field: 'address',
+                width: 270,
+            },
+            {
+                label: 'Birthday',
+                field: 'birthday',
+                width: 200,
+            },
+            {
+                label: 'Rent Info',
+                field: 'rentInfo',
+                sort: 'asc',
+                width: 100,
+            },
+            {
+                label: 'Pet Policy',
+                field: 'petPolisy',
+                sort: 'arc',
+                width: 150,
+            },
+            {
+                label: 'Yard Info',
+                field: 'yardInfo',
+                sort: 'arc',
+                width: 100,
+            },
+            {
+                label: 'Family Info',
+                field: 'familyInfo',
+                sort: 'arc',
+                width: 100,
+            },
+            {
+                label: 'Children Number',
+                field: 'childCount',
+                sort: 'arc',
+                width: 100,
+            },
+            {
+                label: 'Username',
+                field: 'username',
+                sort: 'arc',
+                width: 100,
+            },
+            {
+                label: 'Dangerous Enviroment?',
+                field: 'isDanger',
+                sort: 'arc',
+                width: 100,
+            },
+
+        ],
+        rows: props.data,
+    };
+
+    return <MDBDataTable 
+            hover
+            striped
+            bordered
+            small
+            entriesOptions={[5, 20, 25]} entries={7} pagesAmount={4}
+            searchTop searchBottom={false}
+            data={data} exportToCSV proSelect />;
 }
-
-export default ListUserComponent;
-
