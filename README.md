@@ -38,6 +38,85 @@ Fluffy Paws Shelter application follows these steps to get adopt a pet:
 
 **Step 3:** Approval is given, if a harmony is caught between the pet and the prospective owner at the end of the interview. In the next process, in order for the pet to adapt to ownership, they are vaccinated by experts and the health report is completed.
 
+## Fluffy Paws Shelter Style Guide
+
+This document serves as the complete naming definition of this project. In this style guide inspired by Java™ Programming Language style guide. This guide covered span only aesthetic issues of formatting. 
+
+### Guide Notes
+
+#### Naming
+Naming would be a clear event to people on a different team.
+  
+#### File Names
+
+Examples of the acceptable file names, in javascript:
+
+> personal-info.js
+> ListItem.js
+> AnimalListItem.jsx
+
+in Java Spring Boot:
+
+> AnimalNotFoundException.java
+> ShelterApplication.java
+         
+#### Type Names
+
+Type names start with uppercase and new words can’t start with underscores.
+    
+```
+// classes and structs
+class  { ...
+class AnimalService { ...
+struct AnimalProperties { ...;
+```
+
+```
+// enums
+enum class UserRoles { ...
+```
+
+#### Variable Names
+
+Private variable names start with lowercase but no underscores and public props start with lowercase if variables contain more than one letter than the second one starts with uppercase.
+
+```
+private int weight;
+public String getGender()
+```
+
+Constant names a leading ‘’p’’ following because of our project name by mixed case. Underscores can be used as separators in the rare cases.
+
+```
+    const{username, password}...
+```
+
+#### Function Names
+
+Functions have to start with a uppercase and following letters also have to start with uppercase. But in the mixed cases and service classes can use function like this:
+
+```
+getAllAnimals(),geAnimalsbyId()...
+```
+
+#### Package Names
+
+Package names should have to follow java original style guide. 
+```
+com.package.shelter.model…
+```
+
+#### Enumerator Names
+
+All enum types should have to start with lowercase and following letters start with uppercase.
+
+#### Comments
+
+Comments could add a code following ways:
+
+To add ‘’TO DO: somenting’’
+To desc flow of the class of method.
+
 ## Analysis Report
 
 ![FR1](https://user-images.githubusercontent.com/29989590/90433043-e3099a00-e0d3-11ea-8693-240cad1238c3.png)
