@@ -1,59 +1,55 @@
 import React, { Component } from 'react';
 import {
-    Container, Form, Button, Col
+    Container, Form, Button, Col, Nav, NavDropdown
 } from 'react-bootstrap';
 import NavbarComponent from '../../components/navbar/navbar.js';
 import axios from 'axios';
 import './components/styles/style.css';
 import AuthView from "../../components/AuthView";
 import {Link} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import firebase from "firebase/app";
+import "firebase/auth";
 
 export default class LoginPage extends Component {
     constructor(props){
         super(props);
-
+            let loggedIn = false
         this.state = {
-            username: "",
-            password: ""
+            username: '',
+            password: '',
+            loggedIn
         };
-
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.onChange = this.onChange.bind(this);
+        this.submitForm = this.submitForm.bind(this);
 
     }
 
-    handleChange(event){
+    onChange(e){
         this.setState({
-            [event.target.name] : event.target.value
-        });
+            [e.target.name]: e.target.value
+        })
     }
 
-    handleSubmit(event){
-        const{username, password} = this.state;
+    submitForm(e){
+        e.preventDefault()
+        const{username, password} = this.state
 
-    axios
-    .post(
-        "http://localhost:3000/user",
-        {
-            user:{
-                username: username,
-                password: password
-            }
-        },
-        { withCredentials: true }
-    )
-    .then(reponse => {
-        console.log("res from login", reponse);
-    })
-    .catch(error =>{
-        console.log("login error", error);
-    });
-    event.preventDefault();
-
-}
+        if(username == "root" && password == "root"){
+            global.loggedIn = true;
+            this.setState({
+                loggedIn: true
+            })
+        }
+    }
 
 
     render() {
+
+        if(this.state.loggedIn){
+            return<Redirect to= "/account-settings"/> 
+
+        }
        
         const loginstyle = {
             padding: "8%",
@@ -75,13 +71,13 @@ export default class LoginPage extends Component {
           }
 
         return (
-        
+
                 <div style = {bodystyle}>
                 <NavbarComponent />
                 <Container >
 
                <div style={loginstyle}>
-                        <form onSubmit = {this.handleSubmit}>
+                        <form onSubmit = {this.submitForm}>
                             <h1 className="text-left header" > SIGN IN! </h1>
                             <p>We're happy to see you return! Please sign in to continue!
                             </p>
@@ -90,16 +86,16 @@ export default class LoginPage extends Component {
                                 <br></br>
                                 <label > Username </label>
                                 <input className="form-control" name= "username" placeholder= "Username" type="text" 
-                                value = {this.state.username}
-                                onChange = {this.handleChange}
+                                value={this.state.username}
+                                onChange={this.onChange}
                                 required />
                             </div>
                             <div className="form-group">
                                 <label > Password </label> <input type="password" className="form-control" 
                                 name="password"
                                 placeholder = "Password"
-                                value = {this.state.password}
-                                onChange = {this.handleChange}
+                               value={this.state.password}
+                               onChange={this.onChange}
                                 required/>
                             </div>
                             <br></br>

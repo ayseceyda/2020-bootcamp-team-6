@@ -27,6 +27,30 @@
   <!-- Open Sans Font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDzmDvDH7fiE9gHQja3iIgeXGzJQIrZhFo",
+    authDomain: "fluffy-paws-shelter.firebaseapp.com",
+    databaseURL: "https://fluffy-paws-shelter.firebaseio.com",
+    projectId: "fluffy-paws-shelter",
+    storageBucket: "fluffy-paws-shelter.appspot.com",
+    messagingSenderId: "26719488592",
+    appId: "1:26719488592:web:4ca82b66d94d095ef79f55",
+    measurementId: "G-4DYKY1EVV6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
   <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically injects all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this file. Don't add any assets here! (Check out webpack.dev.babel.js and webpack.prod.babel.js if you want to know more) -->
 </body>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">

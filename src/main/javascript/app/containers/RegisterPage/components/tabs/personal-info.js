@@ -126,7 +126,7 @@ export default class PersonalInfo extends Component {
                     <br />
                 </div>
 
-                <button className="btn btn-success" onClick={this.saveUser}>Submit</button>
+                <Link href='/' className="btn btn-success" onClick={this.saveUser}>Submit</Link>
                 <Link to='/login' className="btn btn-danger" style={{ marginLeft: "10px" }}>Cancel</Link>
 
                 <br />

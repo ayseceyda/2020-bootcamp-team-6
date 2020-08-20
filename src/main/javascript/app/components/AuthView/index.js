@@ -24,18 +24,6 @@ class AuthView extends React.Component {
     }
 
 
-    render(){
-        const view = this.state.currentView == 1
-                        ?<Nav className="mr-left">
-                        <NavDropdown title="Account" id="basic-nav-dropdown" drop="left"><NavDropdown.Item href= "/login">Sign In</NavDropdown.Item> 
-                        </NavDropdown>
-                        </Nav>
-                        : <Nav className="mr-left">
-                        <NavDropdown title="Account" id="basic-nav-dropdown" drop="left"><NavDropdown.Item href="/account-settings" 
-                        >Account Settings</NavDropdown.Item></NavDropdown>
-                        </Nav>
-        return view
-    }
 
 }
 
